@@ -157,8 +157,7 @@ spec:
             namespace: gloo-system
       
 EOF
-````
-
+```
 
 ## Conclusion
-TODO
+It seems that fixing a missing `Upstream` does not trigger a status update on (some) of the resources. Although the service becomes accessible again, the fact that the system is back in a correct state is not reflected in statusses of the various GE resources (e.g. VirtualServices, RouteTables, etc.).
