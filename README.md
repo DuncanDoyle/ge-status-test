@@ -61,7 +61,7 @@ Next delete the HTTPBin2 Upstream:
 kubectl -n gloo-system delete upstream httpbin2-8000
 ```
 
-Notice that the `api-example-com-vs` virtual service will now print a warning: _"Route Warning: InvalidDestinationWarning. Reason:*v1.Upstream { gloo-system.httpbin2-8000 } not found"
+Notice that the `api-example-com-vs` virtual service will now print a warning: _"Route Warning: InvalidDestinationWarning. Reason:*v1.Upstream { gloo-system.httpbin2-8000 } not found"_
 
 ```
 kubectl -n gloo-system get vs api-example-com-vs -o yaml
