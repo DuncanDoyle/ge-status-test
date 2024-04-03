@@ -1,0 +1,15 @@
+apiVersion: gloo.solo.io/v1
+kind: Upstream
+metadata:
+  name: httpbin2-8000
+  namespace: gloo-system
+spec:
+  discoveryMetadata:
+    labels:
+      app: httpbin2
+  kube:
+    selector:
+      app: httpbin2
+    serviceName: httpbin2
+    serviceNamespace: default
+    servicePort: 8000

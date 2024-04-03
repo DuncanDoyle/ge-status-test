@@ -1,0 +1,15 @@
+apiVersion: gateway.solo.io/v1
+kind: RouteTable
+metadata:
+  name: bookstore-routes
+  namespace: gloo-system
+spec:
+  routes:
+    - matchers:
+      - prefix: /
+      routeAction:
+        single:
+          upstream:
+            name: grpc-bookstore-8080
+            namespace: gloo-system
+      
